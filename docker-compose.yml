@@ -7,6 +7,10 @@ services:
       - '8080:80'
     mem_limit: 50mb
     restart: "unless-stopped"
+    volumes:
+      - type: bind
+        source: /home/galo/telemetry
+        target: /telemetry  
     logging: 
       driver: "json-file"
       options: 
